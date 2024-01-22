@@ -1,4 +1,8 @@
 """ Лекція 8. Complexity. Algorithms """
+#   The complexity of my algorithm
+#       is O(n^2)
+#   cause it contains 2 loops inside each other
+
 import random
 
 print(f"\n=======================| Task 1 |=======================")

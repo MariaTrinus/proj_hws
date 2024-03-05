@@ -32,3 +32,52 @@ print(f"\n=======================| Task 1 |=======================")
 #       Review for the host.
 
 #   List of this tool: https://www.holistics.io/blog/top-5-free-database-diagram-design-tools/
+
+
+# =====================================================================
+# Result
+# =====================================================================
+
+# Hosts:
+# host_id	        int	        Primary Key, Unique Identifier
+# host_name	        varchar	    Name of the host
+
+# Guests:
+# guest_id	        int	        Primary Key, Unique Identifier
+# guest_name	    varchar	    Name of the guest
+
+# Rooms:
+# room_id	        int	        Primary Key, Unique Identifier
+# host_id	        int	        Foreign Key to Hosts table (host_id)
+# price	            decimal	    Price per night
+# capacity	        int	        Maximum number of residents
+# ac	            boolean	    Availability of air conditioning
+# refrigerator	    boolean	    Availability of refrigerator
+# wifi	            boolean	    Availability of WiFi
+# private_bathroom	boolean	    Availability of private bathroom
+# pet_friendly	    boolean	    Pet-friendly accommodation
+
+# Reservations Table:
+# reservation_id	int	        Primary Key, Unique Identifier
+# guest_id	        int	        Foreign Key to Guests table (guest_id)
+# room_id	        int	        Foreign Key to Rooms table (room_id)
+# check_in_date	    date	    Date of check-in
+# check_out_date	date	    Date of check-out
+# total_price	    decimal	    Total price of reservation
+
+# Payments Table:
+
+# payment_id	    int	        Primary Key, Unique Identifier
+# guest_id	        int	        Foreign Key to Guests table (guest_id)
+# reservation_id	int	        Foreign Key to Reservations table (reservation_id)
+# amount	        decimal	    Amount paid for reservation
+# payment_date	    date	    Date of payment
+
+# Reviews Table:
+# review_id	        int	        Primary Key, Unique Identifier
+# host_id	        int	        Foreign Key to Hosts table (host_id)
+# room_id	        int	        Foreign Key to Rooms table (room_id)
+# guest_id          int	        Foreign Key to Guests table (guest_id)
+# rating	        int	        Rating given by guest
+# comment	        text	    Review comment
+
